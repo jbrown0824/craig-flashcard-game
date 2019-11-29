@@ -1,17 +1,18 @@
 <template>
 <div>
     <form v-show="showForm" action @submit.prevent="showForm = false">
-    <textarea v-model="text"></textarea>
+    <textarea v-model="text"></textarea><br><br>
     <button type="submit">Show Flash Card</button>
     </form>
     <div v-show="!showForm">
         <a href @click.prevent="showForm = true">Back</a><br>
         <a href @click.prevent="toggle = !toggle">Toggle</a><br>
-        {{ content }}
+        <p>{{ content }}</p>
     </div>
 </template>
 
 <style>
+p { font-size: 18px; }
 textarea{ min-width: 400px; min-height: 200px; }
 </style>
 
