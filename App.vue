@@ -9,7 +9,7 @@
                 <a href @click.prevent="showForm = true" class="back">Back</a>
                 <a href @click.prevent="toggle = !toggle">Toggle</a><br>
             </div>
-			<div class="note">Press Space to Toggle</div>
+<!--			<div class="note">Press Space to Toggle</div>-->
 			<p>{{ content }}</p>
 		</div>
     </div>
@@ -29,8 +29,7 @@
         font-size: 16px;
         margin:5px;
     }
-    a.back{background-color: rgba(32, 105, 191, 0.29)
-    }
+    a.back{background-color: rgba(32, 105, 191, 0.29)}
 	p {
 		font-size: 18px;
 	}
@@ -79,7 +78,7 @@ export default Vue.extend({
 	methods: {
 
 		parseWord(word) {
-			if (!word || !word.length <= 1) return word;
+			if (!word || word.length <= 1) return word;
 
 			let text = word[ 0 ];
 			let leftover = word.toString().substr(1);
